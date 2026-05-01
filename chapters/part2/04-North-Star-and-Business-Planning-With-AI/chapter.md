@@ -1,0 +1,16 @@
+::: {custom-style="CHAPTER NUMBER"}
+Chapter 4
+:::
+
+::: {custom-style="Chapter Title"}
+North Star and Business Planning With AI
+:::
+
+Show how AI collapses the cold start in ideation — generating North Star candidates, first-draft Business Model Canvas, and Impact Maps that the team reacts to rather than builds from scratch.
+
+1.	The Hardest Question in the Room — the blank canvas problem
+2.	AI-Assisted Ideation — Brainstorming and Brainwriting with AI
+3.	From Description to Business Model — AI drafts the Business Model Canvas; team challenges it
+4.	Impact Mapping and AI — AI over-generates deliverables; discipline of removal
+5.	What You Now Have — three artifacts that become prompts for the rest of the book
+
