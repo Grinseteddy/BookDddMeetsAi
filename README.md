@@ -16,3 +16,10 @@ The pandoc command can be find in [/templates/pandoc.md](./templates/pandoc.md).
 The necessary format templated is stored below [/templates/TemplateDddMeetsAi.docx](./templates/TemplateDddMeetsAi.docx) and can be used to create the Word documents with the correct formatting.
 Further needed formatting e.g. for code samples etc. need to be added to the template document.
 The pandoc command creates a word document for the entire book BookDddMeetsAi.docx. For review and editing purposes it can be useful to create word documents for each chapter separately. This can be done by changing the pandoc command to only include the markdown of the chapter you want to convert.
+
+Cites are handled per chapter. There is a central reference file [references.bib](./references.bib) which is used for all chapters in BibTex format.
+Each chapter has its own bibliography section at the end of the chapter.
+The bibliography section is created using a lua filter which collects all cites in the chapter and creates a bibliography section with the corresponding references from the central reference file.
+
+Please be careful to order the keys alphabetically, so that doubles can be detected easily.
+The keys should be ordered according to the following pattern: `AuthorYearTitle` where `Author` is the last name of the first author, `Year` is the year of publication and `Title` is a short title describing the content of the reference.
