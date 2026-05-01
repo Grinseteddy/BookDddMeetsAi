@@ -14,3 +14,6 @@ Show how AI bridges EventStorming and working software — drafting the Event Mo
 4.	From Events to API — AI generates register.yaml, sharing.yaml, rating.yaml
 5.	From Model to Contract — closing artifacts for step 7
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

@@ -13,3 +13,8 @@ Show how AI seeds the EventStorming board with candidate events, commands, and p
 7.	AI Validates the Boundaries — confirming contexts; marking out-of-scope events
 8.	What the Board Knows That Nobody Said — hidden rules surfaced by AI rule extraction
 9.	From Storm to Context Map — closing artifacts for step 5
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

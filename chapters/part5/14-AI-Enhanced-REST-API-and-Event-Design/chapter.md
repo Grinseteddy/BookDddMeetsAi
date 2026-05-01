@@ -13,3 +13,8 @@ Derive the external API surface from the Domain Model — AI generates OpenAPI e
 3.	AI Writes the Event Contracts — AsyncAPI schemas with invariant enforcement at schema level
 4.	One Language, One Contract — AI finds two inconsistencies; both corrected before sign-off
 5.	The Contract Is Signed — complete API artifact set closes step 10
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

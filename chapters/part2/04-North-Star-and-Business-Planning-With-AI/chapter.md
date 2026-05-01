@@ -14,3 +14,7 @@ Show how AI collapses the cold start in ideation — generating North Star candi
 4.	Impact Mapping and AI — AI over-generates deliverables; discipline of removal
 5.	What You Now Have — three artifacts that become prompts for the rest of the book
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+

@@ -12,3 +12,8 @@ Turn the Architecture Communication Canvas and EventStorming Detail into running
 2.	From Canvas to Service — AI generates the Sharing service skeleton from Canvas and OpenAPI spec
 3.	Persistence in the Language of the Domain — RecipeRepository with invariant enforcement at the boundary
 4.	From Decisions to Documentation — Architecture Communication Canvas as living documentation
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

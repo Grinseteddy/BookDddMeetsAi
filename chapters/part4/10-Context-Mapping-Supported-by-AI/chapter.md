@@ -13,3 +13,8 @@ Show how AI makes integration pattern selection deliberate — recommending Open
 7.	Choosing the Right Pattern — AI recommends patterns with reasoning for CookWithUs
 8.	AI Fills the Bounded Context Canvas — first-draft canvas populated from existing artifacts
 9.	From Design to Implementation — Context Map and Canvases as architectural contracts
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

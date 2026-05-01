@@ -14,3 +14,6 @@ Show how AI makes architecture trade-offs explicit — reasoning through Modular
 4.	Choreography or Orchestration? — AI models failure paths; team adds thin orchestrator
 5.	Decisions Documented — three Architecture Decision Records
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

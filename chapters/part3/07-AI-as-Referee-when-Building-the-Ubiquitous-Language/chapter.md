@@ -14,3 +14,6 @@ Show how AI acts as a consistency guardian for the Ubiquitous Language — detec
 4.	Deeper with Every Session — the Enhanced Visual Glossary after EventStorming
 5.	A Living Standard — the Ubiquitous Language is a discipline, not a document
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

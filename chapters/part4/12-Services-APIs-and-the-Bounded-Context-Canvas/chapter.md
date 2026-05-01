@@ -14,3 +14,6 @@ Close Solution Design by producing service definitions, API Product Canvases, an
 4.	Events as Contracts — AsyncAPI schemas for RecipeShared, RecipeRated, IngredientOrdered, SupplierNotified
 5.	The Full Artifact Set — complete Solution Design closes step 8
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

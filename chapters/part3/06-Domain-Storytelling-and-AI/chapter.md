@@ -14,3 +14,8 @@ Show how AI accelerates Domain Storytelling sessions — generating candidate st
 4.	Stories as Specifications — the three-ingredient formula producing CookWithUs Prototype v1
 5.	The First Boundaries Emerge — AI proposes Bounded Context candidates
 6.	From Story to Glossary — closing artifacts for step 4
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

@@ -15,3 +15,8 @@ Establish five principles that govern every AI-assisted modeling session through
 5.	The Devil's Advocate in the Room — AI as challenger, not oracle
 6.	Keeping the Human in the Loop — every Blueprint step is a human decision gate
 7.	Your AI Collaboration Cheat Sheet — one-page reference
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

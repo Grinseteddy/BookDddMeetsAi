@@ -13,3 +13,8 @@ Show how AI identifies Aggregate candidates, distinguishes Entities from Value O
 7.	Entities, Value Objects, and AI — Cook as Entity, Ingredient as Value Object, ShoppingItem decided
 8.	Invariants Made Explicit — three confirmed invariants, two rejected; each as precondition/postcondition
 9.	Aggregates Defined, APIs Ahead — Domain Model closes step 9
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

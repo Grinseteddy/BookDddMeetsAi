@@ -14,3 +14,8 @@ Establish what AI actually does in a modeling context — as Validator, Accelera
 4.	When AI Gets It Wrong — failure modes named plainly; the self-rating rule as the canonical example
 5.	Giving AI the Right Context — the three-ingredient formula
 6.	AI as the Most Knowledgeable Junior Colleague — the mental model
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

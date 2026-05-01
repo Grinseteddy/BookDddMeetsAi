@@ -15,3 +15,6 @@ Show how Example Mapping closes step 11 and EXACT Coding turns those examples in
 9.	Ensemble Programming with AI — driver, two navigators, AI; the decisions AI cannot make
 10.	The Blueprint Lands in Code — EXACT as the answer to AI-assisted DDD at the keyboard
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

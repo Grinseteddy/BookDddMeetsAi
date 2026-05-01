@@ -15,3 +15,6 @@ Synthesize what the AI-augmented Blueprint produced across all five parts, look 
 
 
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
