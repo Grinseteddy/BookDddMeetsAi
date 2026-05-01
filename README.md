@@ -23,3 +23,10 @@ The bibliography section is created using a lua filter which collects all cites 
 
 Please be careful to order the keys alphabetically, so that doubles can be detected easily.
 The keys should be ordered according to the following pattern: `AuthorYearTitle` where `Author` is the last name of the first author, `Year` is the year of publication and `Title` is a short title describing the content of the reference.
+
+The build can be triggered with running
+```bash
+./build.sh
+```
+
+The result is in the root folder of the project as `BookDddMeetsAi.docx`. 
