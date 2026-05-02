@@ -19,7 +19,7 @@ The Synergetic Blueprint Revisited
 
 # The Monday morning problem
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 Domain-driven design workshops are often the most exciting part of a project — the room buzzes with insight, the whiteboard fills with clarity, and the team leaves energized.
 But then comes Monday morning: how do we translate that insight into software?
 The gap between workshop output and delivered software is where many projects falter.
@@ -31,24 +31,24 @@ We will see how AI does not replace the Blueprint but rather reveals where it wa
 
 # Synergetic Blueprint in a nutshell
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 The Synergetic Blueprint is a structured process that guides teams from business intent to running software.
 :::
 
 ## Strategic design part of the Synergetic Blueprint
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 The strategic part of the Blueprint is shown in Figure 1-1.
 :::
 
-::: {custom-style=“Figure”}
+:::{custom-style="Figure"}
 ![](./assets/StrategicDesign.jpg)
 :::
-:::{custom-style=“Figure Caption”}
+:::{custom-style="Figure Caption"}
 Figure 1-1: The strategic part of the Synergetic Blueprint
 :::
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 It consists of three zones — Ideation, Requirements, and Solution Design — and fourteen steps that iteratively frame the problem space and define the solution space.
 The Blueprint emphasizes the importance of context in AI-augmented software development, ensuring that AI output is relevant and actionable.
 
@@ -118,18 +118,18 @@ AI supports the design of the solution architecture by proposing a certain patte
 
 ## Tactical design part of the Synergetic Blueprint
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 The tactical design part falls under the solution area and comprises two zones: Acceptance Criteria and Testing and Solution Design. It is done inside a bounded context team and is shown in Figure 1-2.
 :::
 
-::: {custom-style=“Figure”}
+::: {custom-style="Figure"}
 ![](./assets/TacticalDesign.jpg)
 :::
-:::{custom-style=“Figure Caption”}
+:::{custom-style="Figure Caption"}
 Figure 1-2: The tactical part of the Synergetic Blueprint
 :::
 
-:::{custom-style=“Body Text First”}
+:::{custom-style="Body Text First"}
 
 _*Step 10: Define test cases*_
 
@@ -162,6 +162,27 @@ Those steps will be explained throughout the book, using the companion domain Co
 
 # CookWithUs Blueprint flow
 
+:::{custom-style="Body Text First"}
+CookWithUs connects home cooks to share and discover recipes from the community. 
+We use this fictional platform throughout the book to demonstrate the Synergetic Blueprint and its AI augmentation.
+Figure 1-3 shows the two screens that anchor the idea.
+:::
+
+::: {custom-style="Figure"}
+![](./assets/Together.png)
+:::
+:::{custom-style="Figure Caption"}
+Figure 1-3: Sketches of a CookWithUs recipe sharing platform
+:::
+
+:::{custom-style="Body Text First"}
+The feed lets readers browse, search, and filter by category (e.g., Quick, Vegan, Italian, Baking), and tap into any recipe to see the dish, ingredients, and steps as published by the author. 
+The feed's main action is _Add your own recipe_, placing consumption and contribution on equal footing.
+Each published recipe then becomes a focal point for community engagement: cooks who try it can rate it, leave comments, and upload their own photos or videos of the result.
+A recipe is therefore a living artifact, authored once and continually enriched by everyone who cooks it.
+This premise introduces enough domain complexity to carry the rest of the book: questions of authorship, attribution, discovery, and moderation that the Synergetic Blueprint and its AI augmentation will help us frame.
+:::
+
 # AI augments the Blueprint
 
 # How to read this book
@@ -170,7 +191,7 @@ Those steps will be explained throughout the book, using the companion domain Co
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-::: {custom-style=“FM Head”}
+::: {custom-style="FM Head"}
 References
 :::
 
