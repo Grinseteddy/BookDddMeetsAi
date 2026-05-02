@@ -28,7 +28,7 @@ In this book, we will revisit the Blueprint through the lens of CookWithUs, a fi
 We will see how AI does not replace the Blueprint but rather reveals where it was always waiting for richer input.
 :::
 
-# Synergetic Blueprint in a Nutshell
+# Synergetic Blueprint in a nutshell
 :::{custom-style="Body Text First"}
 The Synergetic Blueprint is a structured process that guides teams from business intent to running software. 
 :::
@@ -53,8 +53,8 @@ The Blueprint emphasizes the importance of context in AI-augmented software deve
 _*Step 1: Define the business intent*_
 
 The problem which needs to be solved and the value which will be created must be defined.
-We can define a North Star Metric to align the teams around a single measure of success [ellis2017hacking][@ellis2017northstar].
-The workshops can be done with techniques of Brainstorming or Brainwriting or with the help of the AI to generate ideas and structure them [@osborn1953applied][@miller2012quick].
+We can define a North Star Metric to align the teams around a single measure of success [@ellis2017hacking; @ellis2017northstar].
+The workshops can be done with techniques of Brainstorming or Brainwriting or with the help of the AI to generate ideas and structure them [@osborn1953applied; @miller2012quick].
 
 _*Step 2: Lay out a plan*_
 
@@ -65,7 +65,7 @@ The AI can be used to generate ideas for the business plan and to structure them
 _*Step 3: Define the domain*_
 
 The is defined by the prioritization and structuring of the business capabilities.
-The domain is further detailed using techniques like _Impact Mapping_ [@adzic2012impact] or capability maps [@moser2025capability] [opengroup2022togaf].
+The domain is further detailed using techniques like _Impact Mapping_ [@adzic2012impact] or capability maps [@moser2025capability; @opengroup2022togaf].
 
 AI is helping to structure and generate ideas which can be discussed in the group.
 
@@ -107,7 +107,7 @@ _*Step 9: Define the services and APIs*_
 Business experts and IT specialists together define the services and APIs based on the ubiquitous language, the defined bounded contexts in a context map.
 They use known pattern of DDD as an Open Host Service, an Anti-Corruption Layer or the conformist pattern [@evans2003ddd].
 
-Further pattern can be used to define the microservice environment like choreographer, orchestrator, CQRS, event-driven architecture, or event-sourcing [@microsoft2025choreography; @bhardwaj2023orchestration,@richardson2019microservices; @davis2019cloudnative; @skrzymowski2024eda; richardson2025eventsourcing].
+Further pattern can be used to define the microservice environment like choreographer, orchestrator, CQRS, event-driven architecture, or event-sourcing [@microsoft2025choreography; @bhardwaj2023orchestration,@richardson2019microservices; @davis2019cloudnative; @skrzymowski2024eda; @richardson2025eventsourcing].
 Those services can be deployed as a modular monolith [@garg2023modular].
 
 AI supports the design of the solution architecture by proposing certain pattern for certain problems.
@@ -155,18 +155,28 @@ AI supports this step in generating the necessary code.
 Those steps will be explained throughout the book with the help of the companion domain CookWithUs.
 :::
 
-# CookWithUs Blueprint Flow
+# CookWithUs Blueprint flow
 
-# AI Augments the Blueprint
+# AI augments the Blueprint
 
 # How to read this book
-
-
-
-
-
-
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
+
+::: {custom-style="FM Head"}
+References
+:::
+
+::: {#refs}
+:::
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+
+
+
+
