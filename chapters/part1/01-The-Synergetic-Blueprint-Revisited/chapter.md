@@ -30,7 +30,13 @@ We will see how AI does not replace the Blueprint but rather reveals where it wa
 
 # Synergetic Blueprint in a Nutshell
 :::{custom-style="Body Text First"}
-The Synergetic Blueprint is a structured process that guides teams from business intent to running software. The strategic part of the Blueprint is shown in Figure 1-1.
+The Synergetic Blueprint is a structured process that guides teams from business intent to running software. 
+:::
+
+## Strategic design part of the Synergetic Blueprint
+
+:::{custom-style="Body Text First"}
+The strategic part of the Blueprint is shown in Figure 1-1.
 :::
 
 ::: {custom-style="Figure"}
@@ -38,13 +44,6 @@ The Synergetic Blueprint is a structured process that guides teams from business
 :::
 :::{custom-style="Figure Caption"}
 Figure 1-1: The strategic part of the Synergetic Blueprint
-:::
-
-::: {custom-style="Figure"}
-![](./assets/TacticalDesign.jpg)
-:::
-:::{custom-style="Figure Caption"}
-Figure 1-2: The tactical part of the Synergetic Blueprint
 :::
 
 :::{custom-style="Body Text First"}
@@ -85,7 +84,75 @@ _*Step 5: Define the ubiquitous language*_
 The ubiquitous language is one of the center stones of DDD and the Blueprint. It is defined by the terms and concepts that are used to describe the domain and the software.
 A _Visual Glossary_ accompanied by Domain Storytelling and Event Storming is highly useful throughout the entire development process [@zoerner2021architekturen].
 
+The creation of the Visual Glossary can be supported by AI by collecting work items and actors out of the domain story to create the glossary.
 
+_*Step: 6: Define bounded contexts*_
+
+Bounded contexts can be defined by EventStorming as overview [@brandolini_eventstorming_web; @brandolini2021eventstorming].
+
+AI can support the process by proposing events based on the domain story and proposing bounded contexts based on the events and the ubiquitous language.
+
+_*Step 7: Precise the ubiquitous language*_
+
+During the EventStorming process, new terms and concepts are determined and the ubiquitous language is further detailed using the Visual Glossary.
+
+_*Step 8: Explore the API and user journey*_
+
+The API and/or user journey are explored to define the software solution. The journey and affected systems can be explored using the technique of Event Modeling [@dilger2024understanding]
+
+AI can support the process by proposing API and user journeys based on the domain story, the ubiquitous language and the defined bounded contexts. Usually, existing systems to be used e.g. like an Input Management System can be proposed as well, when they are part of the AI context.
+
+_*Step 9: Define the services and APIs*_
+
+Business experts and IT specialists together define the services and APIs based on the ubiquitous language, the defined bounded contexts in a context map.
+They use known pattern of DDD as an Open Host Service, an Anti-Corruption Layer or the conformist pattern [@evans2003ddd].
+
+Further pattern can be used to define the microservice environment like choreographer, orchestrator, CQRS, event-driven architecture, or event-sourcing [@microsoft2025choreography; @bhardwaj2023orchestration,@richardson2019microservices; @davis2019cloudnative; @skrzymowski2024eda; richardson2025eventsourcing].
+Those services can be deployed as a modular monolith [@garg2023modular].
+
+AI supports the design of the solution architecture by proposing certain pattern for certain problems.
+
+:::
+
+## Tactical design part of the Synergetic Blueprint
+
+:::{custom-style="Body Text First"}
+The tactical design part is done inside a bounded context and is shown in Figure 1-2.
+:::
+
+::: {custom-style="Figure"}
+![](./assets/TacticalDesign.jpg)
+:::
+:::{custom-style="Figure Caption"}
+Figure 1-2: The tactical part of the Synergetic Blueprint
+:::
+
+:::{custom-style="Body Text First"}
+_*Step 10: Define test cases*_
+
+To define test cases the technique of Example Mapping can be used [@smart2023bdd, @vankelle2024collaborative].
+
+It is even more important to give a generative AI an approciate harness [@emrich2026exact].
+
+_*Step 11: Define domain model*_
+
+Using the enhanced Visual Glossary with the refined Ubiquitous Language, the domain model is defined. It contains aggregates, entities, value objects, and domain events [@evans2003ddd].
+
+_*Step 12: Define REST APIs*_
+
+The REST APIs are defined based on the domain model and the API Product Canvas [@junker_apicanvas;@junker2025crafting].
+It uses the refined ubiquitous language too.
+
+AI can be used to generate the OpenAI specification based on the domain model and the API Product Canvas.
+
+_*Step 13: Define service architecture*_
+
+The internal service architecture is defined based on the domain model and a detail EventStorming [@evans2003ddd;@brandolini_eventstorming_web].
+
+Repositories used in the service can be defined based on the domain model and enhanced ubiquitous language [@evans2003ddd].
+AI supports this step in generating the necessary code.
+
+Those steps will be explained throughout the book with the help of the companion domain CookWithUs.
 :::
 
 # CookWithUs Blueprint Flow

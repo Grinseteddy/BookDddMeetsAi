@@ -16,6 +16,7 @@ find chapters/ -name "*.md" | sort | xargs pandoc \
 --lua-filter=templates/chapter-as-header.lua \
 --lua-filter=templates/section-bibliographies.lua \
 --lua-filter=templates/header-as-chapter.lua \
+--lua-filter=templates/table-cell-styles.lua \
 --metadata=section-bibs-bibliography:references.bib \
 --metadata=section-bibs-level:1 \
 --metadata=reference-section-title:"References" \
