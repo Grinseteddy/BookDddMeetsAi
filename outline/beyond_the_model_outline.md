@@ -41,6 +41,36 @@ A companion to Mastering Domain-Driven Design (BPB, 2025) and DDD Toolbox (BPB, 
 
 ---
 
+## The Synergetic Blueprint — Correct Step Numbering
+
+**Strategic Design — Ideation (Steps 1–3)**
+- Step 1: North Star
+- Step 2: Business Plan
+- Step 3: Capabilities
+
+**Strategic Design — Requirements (Steps 4–8)**
+- Step 4: Business Requirements (Domain Storytelling)
+- Step 5: Ubiquitous Language (Visual Glossary)
+- Step 6: Bounded Contexts (EventStorming Overview)
+- Step 7: Ubiquitous Language refined (Enhanced Visual Glossary)
+- Step 8: User/API Journey (Event Modeling)
+
+**Strategic Design — Solution Design (Step 9)**
+- Step 9: Services & APIs (Context Map, Bounded Context Canvas, Architecture patterns)
+
+**Tactical Design — Acceptance Criteria & Testing (Step 10)**
+- Step 10: Testcases (Example Mapping)
+
+**Tactical Design — Solution Design (Steps 11–14)**
+- Step 11: Domain Model (Enhanced Visual Glossary, Aggregates, Entities, Value Objects)
+- Step 12: REST API Events (API Product Canvas, OpenAPI, AsyncAPI)
+- Step 13: Service (EventStorming Detail, Architecture Communication Canvas)
+- Step 14: Repository (Enhanced Visual Glossary, Ubiquitous Language)
+
+**Total: 14 steps**
+
+---
+
 ## Table of Contents
 
 | Part | Chapter | Pages |
@@ -96,8 +126,8 @@ Sets the contract with the reader — the voice, the philosophy, and the frame t
 | Section | Pages | Content |
 |---|---|---|
 | *(The Monday Morning Problem)* | pp. 1–2 | Hook: the workshop Miro board gathers dust by Monday. The gap between understanding a domain and delivering software that reflects it. The Blueprint exists to close that gap. |
-| The Synergetic Blueprint in a Nutshell | pp. 3–7 | Three zones (Ideation, Requirements, Solution Design, Tactical Design), four CookWithUs illustrations, iterative framing. The Blueprint is a reading order, not an execution order. |
-| The Blueprint Flow | pp. 8–10 | Full-page diagram of all 12 steps across three zones, with CookWithUs artifacts named at each step. The map legend the reader carries through the whole book. |
+| The Synergetic Blueprint in a Nutshell | pp. 3–7 | Four zones (Ideation, Requirements, Solution Design, Tactical Design), fourteen steps, iterative framing. The Blueprint is a reading order, not an execution order. |
+| The Blueprint Flow | pp. 8–10 | Full-page diagram of all 14 steps across four zones, with CookWithUs artifacts named at each step. The map legend the reader carries through the whole book. |
 | AI Augments the Blueprint | pp. 11–15 | Three CookWithUs previews of AI augmentation. The book's central claim: AI doesn't replace the Blueprint — it reveals where the Blueprint was always waiting for richer input. |
 | Meet CookWithUs | pp. 16–17 | Formal introduction of the companion domain. Actors, work objects, business rules, initial bounded contexts. Grounded in two published blog posts. |
 | *(How to Read This Book)* | p. 18 | Navigation guide. Each chapter: Blueprint step → AI augmentation → CookWithUs illustration → references. Pointers to previous books for deeper dives. |
@@ -136,7 +166,7 @@ Sets the contract with the reader — the voice, the philosophy, and the frame t
 | Artifacts Are Your Prompts | pp. 43–45 | The quality of AI output is directly proportional to the quality of Blueprint artifacts provided as context. The three-iteration CookWithUs pipeline proves this empirically. |
 | Validate Before You Propagate | pp. 46–47 | AI output that enters a Blueprint artifact without human review becomes organisational debt. One wrong term in the Visual Glossary pollutes every downstream artifact. |
 | The Devil's Advocate in the Room | pp. 48–49 | The best use of AI in a modeling session is to argue the other side. CookWithUs illustration: AI challenges the Register/Sharing boundary and exposes a hidden coupling. |
-| Keeping the Human in the Loop | pp. 50–51 | Every numbered Blueprint step is a human decision gate. AI can inform steps 1–12; it cannot own any of them. |
+| Keeping the Human in the Loop | pp. 50–51 | Every numbered Blueprint step is a human decision gate. AI can inform steps 1–14; it cannot own any of them. |
 | *(Your AI Collaboration Cheat Sheet)* | p. 52 | A compact one-page reference: the five principles mapped to each Blueprint step, showing which AI role applies where. Designed to be printed and pinned up during modeling sessions. |
 
 **Diagrams:** The collaboration cheat sheet (full page, p. 52)  
@@ -188,7 +218,7 @@ Blueprint steps 1–3. From blank canvas to prioritized capabilities with domain
 ## Part III — AI Supports Requirement Gathering
 **Chapters 6–9 | pp. 86–152**
 
-Blueprint steps 4–7. From Domain Storytelling through Ubiquitous Language, EventStorming, and Event Modeling to a validated API contract. Empirically grounded in two published blog posts and three CookWithUs prototype iterations.
+Blueprint steps 4–8. From Domain Storytelling through Ubiquitous Language, EventStorming, and Event Modeling to a validated API contract. Empirically grounded in two published blog posts and three CookWithUs prototype iterations.
 
 ---
 
@@ -237,7 +267,7 @@ Blueprint steps 4–7. From Domain Storytelling through Ubiquitous Language, Eve
 | Seeding the Storm | pp. 121–125 | Big Picture EventStorming with AI generating candidate domain events, commands, and policies. CookWithUs: AI proposes CookRegistered, RecipeShared, RecipeRated, PicturesTaken, ShoppingListCreated, IngredientOrdered. The self-rating policy appears explicitly — AI encodes it correctly in every subsequent artifact. |
 | AI Validates the Boundaries | pp. 126–129 | AI confirms Register, Sharing, and Rating; surfaces Ingredient Sourcing as a genuine separate context. MealCooked and RecipeTried are explicitly marked out of scope. |
 | What the Board Knows That Nobody Said | pp. 130–134 | Hidden business rules visible only when the full event sequence is laid out. CookWithUs: the uniqueness constraint on Recipe Title appears as a policy sticky. AI surfaces three additional candidate rules — two confirmed, one rejected. |
-| *(From Storm to Context Map)* | p. 135 | The EventStorming board closes step 5 with three confirmed bounded contexts, two emerging ones, and explicit policies. The board is not a deliverable — it is the evidence from which every subsequent design decision is derived. |
+| *(From Storm to Context Map)* | p. 135 | The EventStorming board closes step 6 with three confirmed bounded contexts, two emerging ones, and explicit policies. The board is not a deliverable — it is the evidence from which every subsequent design decision is derived. |
 
 **Diagrams:** CookWithUs EventStorming board overview (full page, p. 122) · Bounded Context boundaries overlaid on the board (half page, p. 127)  
 **Footnotes:** ⁴ ⁵ ⁹ ¹⁰
@@ -254,7 +284,7 @@ Blueprint steps 4–7. From Domain Storytelling through Ubiquitous Language, Eve
 | AI Drafts the Event Model | pp. 138–142 | AI generates swimlanes, commands, events, and read models for CookWithUs. Every event on the board must appear in the model; every model element must trace back to the board. |
 | Screen Flows from Domain Stories | pp. 143–146 | AI maps Domain Stories to screen flows. CookWithUs: six-activity Domain Story becomes four screens. Every field, every label traces back to a sticky note or pictogram. |
 | From Events to API | pp. 147–151 | The Event Model drives the OpenAPI spec. AI generates register.yaml, sharing.yaml, rating.yaml. The self-rating rule appears as a 403 response. Bounded contexts share IDs, not schemas. |
-| *(From Model to Contract)* | p. 152 | Step 7 closes with three OpenAPI specs, a validated Event Model, and screen flows for every bounded context. |
+| *(From Model to Contract)* | p. 152 | Step 8 closes with three OpenAPI specs, a validated Event Model, and screen flows for every bounded context. |
 
 **Diagrams:** CookWithUs Event Model swimlanes (full page, p. 140) · Three bounded context API specs overview (half page, p. 149)  
 **Footnotes:** ⁴ ⁵ ⁸ ⁹ ¹⁰
@@ -264,7 +294,7 @@ Blueprint steps 4–7. From Domain Storytelling through Ubiquitous Language, Eve
 ## Part IV — AI in Solution Design
 **Chapters 10–12 | pp. 153–203**
 
-Blueprint step 8. From Context Map to complete Solution Design artifact set — integration patterns, architecture decisions, service definitions, API contracts, and event schemas. Every artifact traces back to the EventStorming board and the Visual Glossary.
+Blueprint step 9. From Context Map to complete Solution Design artifact set — integration patterns, architecture decisions, service definitions, API contracts, and event schemas. Every artifact traces back to the EventStorming board and the Visual Glossary.
 
 ---
 
@@ -312,7 +342,7 @@ Blueprint step 8. From Context Map to complete Solution Design artifact set — 
 | Services from the Context Map | pp. 189–193 | AI generates service definitions for each CookWithUs bounded context. Sharing owns Recipe and ShoppingList. Rating owns Rating and references Recipe only via recipeId. Register owns Cook identity with no dependencies. |
 | The API Product Canvas | pp. 194–197 | AI populates a first-draft API Product Canvas for the Sharing API. The canvas surfaces missing rate limits, versioning strategy, and error taxonomy. Cross-reference to Crafting Great APIs with Domain-Driven Design. |
 | Events as Contracts | pp. 198–202 | AsyncAPI for CookWithUs domain events. Every field traces back to a sticky note. The self-rating policy appears as a validation rule in the RecipeRated schema. |
-| *(The Full Artifact Set)* | p. 203 | Step 8 closes with the complete Solution Design. Every artifact traces back to a Domain Story, a sticky note, or a Visual Glossary entry. |
+| *(The Full Artifact Set)* | p. 203 | Step 9 closes with the complete Solution Design. Every artifact traces back to a Domain Story, a sticky note, or a Visual Glossary entry. |
 
 **Diagrams:** CookWithUs service definitions overview (half page, p. 190) · RecipeShared AsyncAPI schema (half page, p. 200)  
 **Footnotes:** ¹ ⁶ ⁷ ⁸ ¹⁴ ¹⁵
@@ -322,7 +352,7 @@ Blueprint step 8. From Context Map to complete Solution Design artifact set — 
 ## Part V — Tactical Design & Implementation Using AI
 **Chapters 13–16 | pp. 204–273**
 
-Blueprint steps 9–12. From Domain Model to running, tested, documented software. Every upstream modeling decision either pays off here or reveals its gaps.
+Blueprint steps 10–14. From Domain Model to running, tested, documented software. Every upstream modeling decision either pays off here or reveals its gaps.
 
 ---
 
@@ -336,7 +366,7 @@ Blueprint steps 9–12. From Domain Model to running, tested, documented softwar
 | Finding the Aggregates | pp. 206–210 | AI identifies aggregate candidates from the EventStorming board and Visual Glossary. CookWithUs: Recipe as primary aggregate, Cook as second, Rating as third. How to validate aggregate boundaries using the "can this change without coordinating another aggregate?" test. |
 | Entities, Value Objects, and AI | pp. 211–213 | AI distinguishes Entities from Value Objects by looking for identity requirements. CookWithUs: Cook is an Entity, Ingredient is a Value Object, ShoppingItem is a Value Object. |
 | Invariants Made Explicit | pp. 214–219 | AI surfaces invariant candidates from EventStorming policy stickies. CookWithUs: Recipe must have a unique Title; a Cook cannot rate their own Recipe; a Recipe must have at least one Ingredient and one HowTo Step. Each rule stated as precondition, postcondition, and violation response. Two AI-suggested invariants rejected and why. |
-| *(Aggregates Defined, APIs Ahead)* | p. 220 | The Domain Model artifact closes step 9: a validated aggregate map with Entities, Value Objects, and documented invariants. |
+| *(Aggregates Defined, APIs Ahead)* | p. 220 | The Domain Model artifact closes step 11: a validated aggregate map with Entities, Value Objects, and documented invariants. |
 
 **Diagrams:** CookWithUs aggregate map (full page, p. 207) · Recipe aggregate internals (half page, p. 212)  
 **Footnotes:** ¹ ⁶ ⁷
@@ -353,7 +383,7 @@ Blueprint steps 9–12. From Domain Model to running, tested, documented softwar
 | From Aggregate to Endpoint | pp. 223–227 | AI generates OpenAPI endpoints from CookWithUs aggregates. The self-rating invariant appears as a 403 response. The Title uniqueness invariant appears as a 409 conflict. Every aggregate operation has a corresponding endpoint. |
 | AI Writes the Event Contracts | pp. 228–231 | AI generates AsyncAPI schemas from the EventStorming board and Domain Model. RecipeRated: raterId ≠ cookId enforced at schema level. Every EventStorming event has a corresponding AsyncAPI schema. |
 | One Language, One Contract | pp. 232–235 | AI validates consistency across the entire artifact set. CookWithUs: AI finds two inconsistencies — "userId" vs. "cookId" and "steps" vs. "howTo". Both corrected before the contract is signed. |
-| *(The Contract Is Signed)* | p. 236 | The complete API artifact set closes step 10. These are the contracts the EXACT Coding chapter will implement — and the tests will enforce. |
+| *(The Contract Is Signed)* | p. 236 | The complete API artifact set closes step 12. These are the contracts the EXACT Coding chapter will implement — and the tests will enforce. |
 
 **Diagrams:** Recipe aggregate to OpenAPI endpoint mapping (half page, p. 224) · RecipeRated AsyncAPI schema with invariant enforcement (half page, p. 230)  
 **Footnotes:** ¹ ⁶ ⁸ ¹⁴ ¹⁵
@@ -367,7 +397,7 @@ Blueprint steps 9–12. From Domain Model to running, tested, documented softwar
 
 | Section | Pages | Content |
 |---|---|---|
-| *(From Criteria to Code)* | pp. 237–238 | The Blueprint has produced a Domain Model, an API contract, and documented invariants. Example Mapping closes step 11. This chapter is the keystone of the book — where every upstream modeling decision pays off or reveals its gaps. |
+| *(From Criteria to Code)* | pp. 237–238 | The Blueprint has produced a Domain Model, an API contract, and documented invariants. Example Mapping closes step 10. This chapter is the keystone of the book — where every upstream modeling decision pays off or reveals its gaps. |
 | Mapping the Examples | pp. 239–241 | AI generates candidate examples from Domain Model invariants and API contract. CookWithUs: the self-rating rule generates three examples — including the co-authorship edge case the model hadn't addressed. Each example becomes a test before it becomes code. |
 | EXACT: A New Way to Code with AI | pp. 242–246 | Ferdinand Ade and Marco Emrich introduce EXACT Coding. Why vibe-coding fails in complex domains. The Ubiquitous Language becomes rule files and prompt vocabulary. The four EXACT core modules: TDD, Example Mapping, Mob/Ensemble Programming, AI tooling (Claude Code and Cursor). |
 | The EXACT Workflow in Practice | pp. 247–251 | The EXACT workflow applied to CookWithUs: failing test → AI prompt with Domain Model invariant and OpenAPI spec → implementation → human-in-the-loop decision → refactor if needed. Tests are the living specification — safe refactoring is only possible because the tests reflect the domain. |
@@ -381,11 +411,11 @@ Blueprint steps 9–12. From Domain Model to running, tested, documented softwar
 
 ### Chapter 16 — Service and Repository Implementation Using AI (pp. 257–273)
 
-**Core argument:** The final Blueprint step turns the Architecture Communication Canvas and EventStorming Detail into running, documented software. AI generates the infrastructure scaffolding; the domain logic stays in human hands.
+**Core argument:** The final Blueprint steps (13–14) turn the Architecture Communication Canvas and EventStorming Detail into running, documented software. AI generates the infrastructure scaffolding; the domain logic stays in human hands.
 
 | Section | Pages | Content |
 |---|---|---|
-| *(The Last Step)* | pp. 257–258 | Step 12 is not where the hard thinking happens — that's done. It's where the thinking becomes software. AI generates service skeletons, repository scaffolding, and living documentation from the artifacts already produced. |
+| *(The Last Step)* | pp. 257–258 | Steps 13–14 are not where the hard thinking happens — that's done. It's where the thinking becomes software. AI generates service skeletons, repository scaffolding, and living documentation from the artifacts already produced. |
 | From Canvas to Service | pp. 259–264 | AI generates the CookWithUs Sharing service skeleton from the Architecture Communication Canvas and OpenAPI spec. CQRS separating ShareRecipe commands from recipe query projections. Event Sourcing for Recipe history. Every OpenAPI endpoint has a handler, every handler calls a domain method, every domain method maps to an aggregate operation. |
 | Persistence in the Language of the Domain | pp. 265–269 | AI generates Repository interfaces and implementations from the Domain Model. CookWithUs: RecipeRepository — findById, save, findByTitle. Title uniqueness enforced in the RecipeRepository save method — not in the service layer, not in the API handler. |
 | From Decisions to Documentation | pp. 270–273 | AI populates the Architecture Communication Canvas from the implemented service definitions and EventStorming Detail board. The canvas as living documentation updated with every significant change — and as the onboarding document for every new team member. |
@@ -403,7 +433,7 @@ Blueprint steps 9–12. From Domain Model to running, tested, documented softwar
 
 | Section | Pages | Content |
 |---|---|---|
-| *(From North Star to Running Software)* | pp. 274–275 | The full CookWithUs journey in two pages: from the founding team's blank canvas to a running, tested, documented software system. Every artifact named, every step connected — North Star → Business Model Canvas → Capability Map → Wardley Map → Domain Story → Visual Glossary → EventStorming board → Context Map → ADRs → Domain Model → OpenAPI specs → AsyncAPI schemas → Example Map → EXACT-coded services → Architecture Communication Canvas. |
+| *(From North Star to Running Software)* | pp. 274–275 | The full CookWithUs journey in two pages: from the founding team's blank canvas to a running, tested, documented software system. Every artifact named, every step connected — North Star (1) → Business Plan (2) → Capabilities (3) → Domain Story (4) → Visual Glossary (5) → Bounded Contexts (6) → Enhanced Glossary (7) → Event Model (8) → Context Map (9) → Testcases (10) → Domain Model (11) → API Contracts (12) → Services (13) → Repositories (14). |
 | The Difference AI Made | pp. 276–280 | A synthesis across all five parts. What changed: cold starts collapsed, first drafts arrived in minutes, consistency checks ran in seconds, hidden rules surfaced faster. What stayed irreducibly human: knowing the domain, owning the decisions, validating the language, judging "good enough." The five principles from Chapter 3 revisited. |
 | From Augmentation to Autonomy | pp. 281–284 | Where AI-assisted DDD is heading. Autonomous modeling agents in real-time EventStorming sessions. AI-maintained living glossaries. Real-time consistency checking across the full artifact chain. The questions worth watching: when does AI stop being a sparring partner and start being a decision-maker? What stays human when everything else can be automated? |
 | *(The Human at the Centre)* | pp. 285–286 | A personal note. The Blueprint was designed by people who believe that great software is a product of deep understanding. AI makes that understanding faster to develop and easier to encode. It does not make it unnecessary. The human at the centre of every Blueprint step is not a bottleneck to be optimized away — they are the reason the software matters. |
@@ -427,7 +457,7 @@ APA style with footnote numbers. All chapters draw from this list.
 
 ### Your Previous Books
 - ⁶ Junker, A. (2025). *Mastering domain-driven design: Collaborative modeling with domain storytelling, event storming, and context mapping*. BPB Publications. ISBN 9789365892529
-- ⁷ Junker, A. (2025). *DDD toolbox: Comprehensive overview of concepts and collaborative modeling*. BPB Publications. ISBN 9789365892741
+- ⁷ Junker, A. (2026). *DDD toolbox: Comprehensive overview of concepts and collaborative modeling*. BPB Publications. ISBN 9789365892741
 - ⁸ Junker, A., & Lazzaretti, F. (2025). *Crafting great APIs with domain-driven design: Collaborative craftsmanship of asynchronous and synchronous APIs*. Apress. ISBN 9798868814563
 
 ### Your Blog Posts
