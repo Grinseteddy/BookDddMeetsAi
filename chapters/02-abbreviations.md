@@ -2,7 +2,7 @@
 Abbreviations and terms
 :::
 
-<!-- todo Update terms with marks of chapter 1 Synergetic blueprint -->
+[//]: # (TODO Update terms with marks of chapter 1 Synergetic blueprint)
 
 | Abbreviation and Terms | Note |
 |--|-------|
