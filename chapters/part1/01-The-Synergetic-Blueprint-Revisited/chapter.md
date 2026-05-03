@@ -17,7 +17,7 @@ When AI meets DDD, the context required by AI is provided by rich models created
 # The Monday morning problem
 
 :::{custom-style="Body Text First"}
-Domain-driven design workshops are often the most exciting part of a project — the room buzzes with insight, the whiteboard fills with clarity, and the team leaves energized.
+Domain-driven design workshops are often the most exciting part of a project: the room buzzes with insight, the whiteboard fills with clarity, and the team leaves energized.
 But then comes Monday morning: how do we translate that insight into software?
 The gap between workshop output and delivered software is where many projects falter.
 The Synergetic Blueprint was designed to bridge that gap, but it can feel abstract without a concrete example.
@@ -46,7 +46,7 @@ Figure 1-1: The strategic part of the Synergetic Blueprint
 :::
 
 :::{custom-style="Body Text First"}
-It consists of three zones — Ideation, Requirements, and Solution Design — and fourteen steps that iteratively frame the problem space and define the solution space.
+It consists of three zones (Ideation, Requirements, and Solution Design) and fourteen steps that iteratively frame the problem space and define the solution space.
 The Blueprint emphasizes the importance of context in AI-augmented software development, ensuring that AI output is relevant and actionable.
 
 _*Step 1: Define the business intent*_
@@ -157,7 +157,7 @@ AI supports this step in generating the necessary code.
 Those steps will be explained throughout the book, using the companion domain CookWithUs.
 :::
 
-# CookWithUs Blueprint flow
+# Meet CookWithUs
 
 :::{custom-style="Body Text First"}
 CookWithUs connects home cooks to share and discover recipes from the community. 
@@ -177,50 +177,123 @@ The feed lets readers browse, search, and filter by category (e.g., Quick, Vegan
 The feed's main action is _Add your own recipe_, placing consumption and contribution on equal footing.
 Each published recipe then becomes a focal point for community engagement: cooks who try it can rate it, leave comments, and upload their own photos or videos of the result.
 A recipe is therefore a living artifact, authored once and continually enriched by everyone who cooks it.
-This premise introduces enough domain complexity to carry the rest of the book: questions of authorship, attribution, discovery, and moderation that the Synergetic Blueprint and its AI augmentation will help us frame.
+
+Even from these two screens, the building blocks of the domain start to surface.
+The principal actor is the Cook, who reads recipes today and may publish one tomorrow.
+The central work object is the Recipe, with its Ingredients, Steps, and a Photo of the finished dish.
+Around each Recipe, the community contributes Ratings, Comments, and further Photos of their own attempts.
+Categories such as Quick, Vegan, or Italian let cooks find recipes that fit the moment. 
+These terms are deliberately tentative: the chapters ahead will sharpen them, add the ones the sketch does not yet show, and decide which belong together in the same bounded context.
 :::
 
 # AI augments the Blueprint
 
-:::{custom-style="Body Text First"}
-AI can augment each step of the Blueprint, as we will see throughout the book.
+::: {custom-style="Body Text First"}
+The Synergetic Blueprint is a recent synthesis, named in 2025.
+The techniques it brings together (Domain Storytelling, EventStorming, Context Mapping, and the rest) are mature, and teams have used them for years without an LLM in the room. 
+The result has long been good software that reflects its domain.
+So the question this book has to answer is not whether AI helps, but where it helps, and why. 
+The answer starts with a simple observation: the Blueprint produces unusually good context. 
+Every step leaves behind a structured artifact (Domain Story, Visual Glossary, EventStorming board, Context Map) that names actors, work objects, events, and rules in the team's own ubiquitous language. 
+Generative AI works best when given exactly this kind of input. The Blueprint was not designed for AI, but it produces the artifacts AI most needs.
 
-During the ideation process, AI can deliver additional ideas and steer the discussion.
+That observation reframes what AI is doing in a Blueprint workshop.
+It is not generating answers from nothing.
+It is reading the artifacts the team has already produced and offering material the team can react to.
+Across the chapters ahead, that material falls into three roles.
 
-During the requirement gathering process, AI can the facilitators in preparing and following-up the workshops.Moreover, it helps to change the format used, e.g., from a remote whiteboard picture format to a format that is easily searchable and which can be stored in a version control system.
+_As a validator_, AI checks the artifacts the team produces against each other.
+It flags a term in the Visual Glossary when it drifts from the Domain Story, when an event on the EventStorming board has no corresponding API endpoint, or when an aggregate invariant is missing from the OpenAPI spec.
+The team owns the decision; AI surfaces the inconsistency.
 
-During the solution design process, AI can propose solution architectures based on the defined domain and the ubiquitous language, and it helps to generate the necessary code for the implementation.
+_As an accelerator_, AI collapses the cold start that begins every modeling session.
+A blank EventStorming board, an empty Capability Map, a North Star sentence the team cannot yet write: AI produces a first draft within minutes, giving the team something concrete to react to.
+The first draft is rarely the final one.
+It is the foothold from which the real work begins.
 
-We will explore the entire process in detail throughout the book, using the companion domain CookWithUs to demonstrate how AI can augment the Synergetic Blueprint at each step.
+_As a provocateur_, AI argues the side the team has not considered.
+It proposes the bounded context the team grouped together, the rule the team forgot to make explicit, the integration pattern the team would not have chosen.
+A good provocateur is wrong often enough to be interesting and right often enough to be useful.
+
+To make this concrete, consider the first step of the Blueprint applied to CookWithUs.
+The founders have a sentence: "We want to make it easy for home cooks to share what they cook."
+That is intent, not a North Star Metric.
+Asked for candidates, AI proposes several: recipes published per active cook per month, cooks who try at least one community recipe per week, or recipes with at least one community photo.
+None is the final answer.
+The founders argue, and the argument itself is the point: the candidates gave them something to disagree with.
+The North Star they eventually choose owes more to the disagreement than to the AI.
+The chapters ahead apply this pattern to every Blueprint step. AI does not replace the humans in the process.
+It works alongside them, augmenting steps where the Blueprint is ready for richer input.
 :::
 
 # How to read this book
 
 :::{custom-style="Body Text First"}
-This book is structured around the Synergetic Blueprint, with each chapter focusing on a specific step in the process.
+This book follows the Synergetic Blueprint in order, but it does not need to be read in order.
+Each chapter covers one Blueprint step, and each chapter follows the same shape: the step itself, the role AI plays in it, a CookWithUs illustration, and the references for going deeper.
+A reader who picks up the book on Monday morning to solve a specific problem can open the chapter for that step and find what they need.
 
-We will give different perspectives on the Blueprint, starting with the strategic design part and then moving to the tactical design part.
-Each step describes in detail how AI can augment the process, and we will use the companion domain CookWithUs to demonstrate the concepts in a concrete way.
+The chapters are grouped by Blueprint zone.
+Part II covers Ideation: business intent, planning, and capability mapping.
+Part III covers Requirements: Domain Storytelling, the Ubiquitous Language, EventStorming, and Event Modeling.
+Part IV covers strategic Solution Design: context mapping, architecture decisions, services, and APIs.
+Part V covers tactical design and implementation: test cases, the domain model, REST and event APIs, and the services and repositories that run the code.
+Part I, which this chapter closes, sets the foundation: the Blueprint itself, AI as a design partner, and the principles that keep humans in charge of the process.
 
-Whereas in this first part, we lay the foundation how to use AI in a collaborative software design process.
+CookWithUs runs through every chapter as the worked example.
+The prompts, skills, and agents used along the way are described in detail in the chapters where they apply, and the full set of assets, including the running CookWithUs codebase, is available in a public repository (https://github.com/Grinseteddy/SamplesDddMeetAi).
 
-We will describe in the next parts how to use AI in the different steps of the Blueprint, starting with the ideation process with North Star Metric and capability mapping.
-Part III describes the requirements gathering and Part IV the strategic design part.
-We will move to the tactical design part in Part V.
-We will describe how to use AI in the definition of test cases, domain models, REST APIs, service architecture, and repositories.
-
-In all parts, we will use the model of the recipe sharing platform CookWithUs.
-The used prompts, skills, and agents will be described in detail, and we will give recommendations on how to use them in practice.
-All assets are accessible in a [public repository](https://github.com/Grinseteddy/SamplesDddMeetAi).
+Before any of that begins, chapter 2 looks more closely at AI as a design partner: the context it thrives in, the mistakes it makes, and the mental model a team needs to work with it well.
 :::
+
+# Points to remember
+
+:::{custom-style="Bullet"}
+The Synergetic Blueprint is a structured process that guides teams from business intent to running software in fourteen iterative steps.
+
+
+The Blueprint provides the context that makes generative AI relevant and actionable.
+
+
+AI plays three roles in the Blueprint: validator, accelerator, and provocateur.
+
+
+CookWithUs is the fictional domain that runs through every chapter, illustrating the Blueprint and its AI augmentation in concretely.
+:::
+
+:::{custom-style="EXERCISE HEAD"}
+Review questions
+:::
+
+:::{custom-style="Num List"}
+Does AI replace humans in the Synergetic Blueprint process?
+:::
+:::{custom-style="Num Sub List"}
+Yes, AI generates the software design and architecture based on the business intent.
+
+No, AI works alongside humans, augmenting steps where the Blueprint is ready for richer input.
+
+AI replaces business experts in the early steps and developers in the later steps.
+:::
+
+:::{custom-style="Num List"}
+Is the Synergetic Blueprint only useful with AI?
+:::
+:::{custom-style="Num Sub List"}
+Yes, it was designed specifically for AI-augmented software development.
+
+No, it is a structured process that can be used with or without AI, but it produces the context that AI needs to be relevant and actionable.
+
+It only works for traditional software development processes.
+:::
+
+
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-::: {custom-style="Chapter Title"}
-References
-:::
+# References
 
 ::: {#refs}
 :::

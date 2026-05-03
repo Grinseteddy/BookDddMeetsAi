@@ -11,9 +11,9 @@ Foundations
 
 
 ::: {custom-style="Part Opener Text"}
-This part sets the foundation for everything that follows.
-AI is reshaping software development — but AI output is only as good as the context it receives.
-Part I introduces the Synergetic Blueprint, the structured process from business intent to running software that provides that context, and establishes the principles that govern effective human-AI collaboration throughout the book.
+AI output is only as good as the context it receives, and the Synergetic Blueprint is the structured process that produces that context, guiding teams from business intent to running software in fourteen iterative steps.
+Part I introduces the Blueprint, meets CookWithUs — the recipe-sharing platform that runs through every example — and establishes the principles that keep humans in charge of every step.
+The book's central claim begins here: AI does not replace humans in the process. It works alongside them, augmenting steps where the Blueprint is ready for richer input.
 :::
 
 
