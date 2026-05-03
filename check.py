@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Markdown consistency checker for Pandoc book projects.
-Checks structure: Parts, Chapters, Headings, Custom Styles, Images, Citations.
+Checks structure: Parts, Chapters, Headings, Custom Styles, Images, Citations,
+Figure and Table numbering.
 """
 
 import re
@@ -43,12 +44,6 @@ def check_file(path, content):
         if has_part_number or has_part_title:
             warn(f"{rel}: Part styles found in a chapter file")
 
-    # --- Curly quote check in custom-style declarations ---
-        for lineno, line in enumerate(content.splitlines(), start=1):
-            if 'custom-style=' in line:
-                if '\u201c' in line or '\u201d' in line or '\u2018' in line or '\u2019' in line:
-                    error(f"{rel} line {lineno}: Curly quotes in custom-style declaration — replace with straight quotes")
-
     # --- Heading hierarchy check ---
     headings = re.findall(r'^(#{1,6})\s+.+', content, re.MULTILINE)
     levels = [len(h) for h in headings]
@@ -69,6 +64,37 @@ def check_file(path, content):
     if is_part:
         if "nextPage" not in content and r"\newpage" not in content:
             warn(f"{rel}: No section/page break found at end of part file")
+
+    # --- Figure and Table caption numbering check ---
+    if is_chapter:
+        # Extract chapter number from content e.g. "Chapter 1" → 1
+        ch_match = re.search(r'custom-style="CHAPTER NUMBER"\}\s*\n+Chapter\s+(\d+)', content)
+        ch_num = int(ch_match.group(1)) if ch_match else None
+
+        for label, style in [("Figure", "Figure Caption"), ("Table", "Table Caption")]:
+            # Find all captions: lines after custom-style="Figure Caption" or "Table Caption"
+            captions = re.findall(
+                rf'custom-style="{style}"\}}\s*\n+([^\n]*{label}\s+(\d+)-(\d+)[^\n]*)',
+                content
+            )
+            if not captions:
+                continue
+
+            seq_nums = []
+            for full, cap_ch, cap_seq in captions:
+                cap_ch, cap_seq = int(cap_ch), int(cap_seq)
+
+                # Check chapter prefix matches
+                if ch_num and cap_ch != ch_num:
+                    error(f"{rel}: {label} caption has wrong chapter number: '{full.strip()}' "
+                          f"(expected {label} {ch_num}-x)")
+                seq_nums.append((cap_seq, full.strip()))
+
+            # Check sequential numbering starting at 1
+            for i, (seq, caption) in enumerate(seq_nums, start=1):
+                if seq != i:
+                    error(f"{rel}: {label} numbering gap or duplicate – "
+                          f"expected {label} {ch_num}-{i}, found '{caption}'")
 
     # --- Citation check: all cites must start with @ ---
     # Valid pandoc citations: [@key] or @key or [@key1; @key2]
