@@ -1,12 +1,19 @@
 # BOOK Projekt
 
 ## Title: Beyond the Model
-## Subtitle: AI-Enhanced Software Design and Architecture
+### Subtitle: AI-Enhanced Software Design and Architecture
 
-## Author: Annegret Junker
+### Author: Annegret Junker
 
 The book project is written as markdowns whereas we use one markdown per chapter.
 The markdowns are located in the `chapters` folder. The book is structured in five parts, each part has a folder of its own. The markdowns are named according to the following pattern: `XX-Chapter-Title/chapter.md` where `XX` is the chapter number and `Chapter-Title` is a short title describing the content of the chapter.
+
+## ToDos
+
+Mark todos with
+
+```markdown
+[//]: # (TODO Mark here the todo)
 
 ## Images and other assets
 
