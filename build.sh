@@ -3,6 +3,12 @@ set -e
 
 OUTPUT="BookDddMeetsAi.docx"
 
+# Check if DOCX is currently open (macOS: lsof checks open file handles)
+if lsof "$OUTPUT" > /dev/null 2>&1; then
+    echo "❌ $OUTPUT is currently open. Please close it in Word first."
+    exit 1
+fi
+
 echo "🔍 Running consistency check..."
 python3 check.py || exit 1
 

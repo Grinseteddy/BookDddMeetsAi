@@ -6,16 +6,13 @@ Chapter 1
 The Synergetic Blueprint Revisited
 :::
 
->TO BE DELETED:
-
->Orient readers in the Synergetic Blueprint without requiring the previous books. Introduce CookWithUs as the companion domain. State the book’s central claim: AI doesn’t replace the Blueprint — it reveals where the Blueprint was always waiting for richer input.
-
->1. The Monday Morning Problem — the gap between workshop insight and delivered software
->2. The Synergetic Blueprint in a Nutshell — three zones, twelve steps, iterative framing
->3. The Blueprint Flow — full diagram with CookWithUs artifacts at each step
->4. AI Augments the Blueprint — three previews of AI augmentation in CookWithUs
->5. Meet CookWithUs — actors, work objects, business rules, bounded contexts
->6. How to Read This Book — navigation guide
+:::{custom-style="Body Text First"}
+Eric Evans introduced Domain-Driven Design (DDD) as a cornerstone of software design in 2003 [@evans2003ddd].
+Since then, the DDD community has developed a rich set of practices and patterns to help teams design software that truly reflects the business domain.
+Using generative Artificial Intelligence (AI) in software design and architecture is a natural next step in this evolution. However, it requires a structured process to ensure that AI output is relevant and actionable, as outlined in the Synergetic Blueprint [@junker2026toolbox].
+Moreover, it requires a clear understanding and implementation of the domain in question.
+When AI meets DDD, the context required by AI is provided by rich models created through a collaborative, iterative process, feeding the generative AI the necessary context.
+:::
 
 # The Monday morning problem
 
@@ -143,10 +140,10 @@ Using the enhanced Visual Glossary with the refined Ubiquitous Language, the dom
 
 _*Step 12: Define REST APIs*_
 
-The REST APIs are defined based on the domain model and the API Product Canvas [@junker_apicanvas;@junker2025crafting].
+The REST APIs are defined based on the domain model and the API Product Canvas [@junker_apicanvas; @junker2025crafting].
 It uses the refined ubiquitous language, too.
 
-AI can generate an OpenAPI specification from the domain model and the API Product Canvas.
+AI can generate an OpenAPI or AsyncAPI specifications from the domain model and the API Product Canvas [@openapi2025spec; @asyncapi2024spec].
 
 _*Step 13: Define service architecture*_
 
@@ -185,13 +182,43 @@ This premise introduces enough domain complexity to carry the rest of the book: 
 
 # AI augments the Blueprint
 
+:::{custom-style="Body Text First"}
+AI can augment each step of the Blueprint, as we will see throughout the book.
+
+During the ideation process, AI can deliver additional ideas and steer the discussion.
+
+During the requirement gathering process, AI can the facilitators in preparing and following-up the workshops.Moreover, it helps to change the format used, e.g., from a remote whiteboard picture format to a format that is easily searchable and which can be stored in a version control system.
+
+During the solution design process, AI can propose solution architectures based on the defined domain and the ubiquitous language, and it helps to generate the necessary code for the implementation.
+
+We will explore the entire process in detail throughout the book, using the companion domain CookWithUs to demonstrate how AI can augment the Synergetic Blueprint at each step.
+:::
+
 # How to read this book
+
+:::{custom-style="Body Text First"}
+This book is structured around the Synergetic Blueprint, with each chapter focusing on a specific step in the process.
+
+We will give different perspectives on the Blueprint, starting with the strategic design part and then moving to the tactical design part.
+Each step describes in detail how AI can augment the process, and we will use the companion domain CookWithUs to demonstrate the concepts in a concrete way.
+
+Whereas in this first part, we lay the foundation how to use AI in a collaborative software design process.
+
+We will describe in the next parts how to use AI in the different steps of the Blueprint, starting with the ideation process with North Star Metric and capability mapping.
+Part III describes the requirements gathering and Part IV the strategic design part.
+We will move to the tactical design part in Part V.
+We will describe how to use AI in the definition of test cases, domain models, REST APIs, service architecture, and repositories.
+
+In all parts, we will use the model of the recipe sharing platform CookWithUs.
+The used prompts, skills, and agents will be described in detail, and we will give recommendations on how to use them in practice.
+All assets are accessible in a [public repository](https://github.com/Grinseteddy/SamplesDddMeetAi).
+:::
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-::: {custom-style="FM Head"}
+::: {custom-style="Chapter Title"}
 References
 :::
 
