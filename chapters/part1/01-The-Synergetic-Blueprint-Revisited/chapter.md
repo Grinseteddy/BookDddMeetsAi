@@ -22,7 +22,7 @@ But then comes Monday morning: how do we translate that insight into software?
 The gap between workshop output and delivered software is where many projects falter.
 The Synergetic Blueprint was designed to bridge that gap, but it can feel abstract without a concrete example.
 It was first introduced by Junker in 2025 [@junker2025mastering] and further developed by Lazzaretti [@junker2025crafting]. The version used here was presented in DDD Toolbox [@junker2026toolbox].
-In this book, we will revisit the Blueprint through the lens of CookWithUs, a fictional cooking app that will serve as our companion domain throughout.
+In this book, we will revisit the Blueprint through the lens of CookWithUs, a fictional recipe-sharing platform that will serve as our companion domain throughout.
 We will see how AI does not replace the Blueprint but rather reveals where it was always waiting for richer input.
 :::
 
@@ -258,7 +258,7 @@ The Blueprint provides the context that makes generative AI relevant and actiona
 AI plays three roles in the Blueprint: validator, accelerator, and provocateur.
 
 
-CookWithUs is the fictional domain that runs through every chapter, illustrating the Blueprint and its AI augmentation in concretely.
+CookWithUs is the fictional domain that runs through every chapter, illustrating the Blueprint and its AI augmentation in a concrete way.
 :::
 
 :::{custom-style="EXERCISE HEAD"}
