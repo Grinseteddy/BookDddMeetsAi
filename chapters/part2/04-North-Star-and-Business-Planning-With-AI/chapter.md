@@ -14,6 +14,10 @@ Show how AI collapses the cold start in ideation — generating North Star candi
 4.	Impact Mapping and AI — AI over-generates deliverables; discipline of removal
 5.	What You Now Have — three artifacts that become prompts for the rest of the book
 
+"AI surfaces assumptions in your Business Model Canvas — what customer segments are you ignoring, what revenue streams have you ruled out without naming?"
+"AI challenges your Impact Map — for each goal, what's the alternative metric, what's the unintended consequence?"
+"AI as the experienced skeptic — it can't tell you your idea, but it can tell you what's been tried before and what failed"
+
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
