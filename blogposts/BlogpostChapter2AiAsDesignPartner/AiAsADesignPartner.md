@@ -15,7 +15,7 @@ The answer is too broad to be useful: AI can summarize, generate, critique, tran
 Asking what AI *can* do invites the team to throw everything at the model and hope something useful comes back.
 That is exactly how we end up with confidently generated nonsense in the middle of an otherwise rigorous design process.
 
-A better question is: *what role is AI playing right now?*
+A better question is: *what role is AI playing in our development process right now?*
 
 When the role is named, the team knows what to expect from the output, what to check for, and what to push back on.
 When the role is unnamed, every AI response feels like an oracle pronouncement, and the team either over-trusts it or dismisses it.
@@ -24,6 +24,12 @@ Three roles cover almost everything AI does inside the Synergetic Blueprint: **D
 They are not new.
 Every design team has always needed someone drafting, someone validating, and someone challenging.
 What is new is that each role can now be filled either by a human or by AI — the role stays the same; only the actor changes.
+
+> The important term here is 'either ... or'.
+> Like with people, you can either be a Drafter or a Provocateur, but not both at the same time.
+> It is hard to draft an idea and question it at the same time.
+> It is easier to focus on one role and let someone else fill the other.
+
 The interesting question is not which role belongs to AI along the Synergetic Blueprint process; it is **who is filling which role at this step, and why**.
 
 ---
@@ -40,7 +46,7 @@ The Drafter does not make decisions; the Drafter creates material that decisions
 The Validator checks artifacts for internal consistency and alignment with what is already known.
 Does the term *Meal* in the new EventStorming session match the *Meal* in the Visual Glossary, or has it drifted?
 Does the OpenAPI specification enforce the ubiquitous language documented in the Visual Glossary?
-Are there bounded contexts in the Context Map that no Domain Story ever mentioned?
+Are there bounded contexts in the Context Map that no Domain Story or EventStorming ever mentioned?
 Validation is comparison work — checking new artifacts against the accumulated set, and flagging where they diverge.
 
 ### Provocateur
@@ -54,7 +60,7 @@ The Provocateur makes the team defend choices they were about to make implicitly
 The roles are distinguishable.
 A Drafter who also asks questions is doing two jobs in one turn.
 A Validator who proposes alternatives has stopped validating and started drafting.
-The clarity comes from naming each move separately, even when the same conversation contains all three.
+The clarity comes from naming each move separately, even when the conversation contains all three.
 
 ---
 
@@ -75,10 +81,10 @@ The picture below maps how these roles distribute across the Synergetic Blueprin
 The primary artifacts are on the left, the role distribution in the middle, and the derived artifacts on the right.
 Strategic Design in blue at the top, Tactical Design in green at the bottom.
 
-> **[Figure: Roles across the Synergetic Blueprint — Drafter, Validator, Provocateur, with human and AI icons showing who fills each role at each step]**
+![Abbildung: Rollen entlang des Synergetic Blueprint — Drafter, Validator, Provocateur, mit Mensch- und KI-Icons, die zeigen, wer in jedem Schritt welche Rolle ausfüllt](./images/DddMeetsAi.jpg)
 
 The diagram is dense on purpose.
-It tries to communicate three things at once: which artifacts the Blueprint produces, what role distribution applies at each step, and how that distribution shifts as the work progresses from ideation to running software.
+It communicates three things at once: which artifacts the Blueprint produces, what role distribution applies at each step, and how that distribution shifts as the work progresses from ideation to running software.
 Three patterns are worth pulling out.
 
 ---
@@ -111,6 +117,10 @@ A Domain Story for CookWithUs has actors (Cook, Anonymous User), work objects (R
 None of those are domain inventions; they are domain *expressions*.
 AI has seen enough recipe-sharing platforms to draft a candidate Domain Story that the team can edit in minutes rather than build over hours.
 
+
+> The AI is not capable of the role of drafter in quite specific domains.
+> However, the role of Provocateur remains reserved for AI in those cases.
+
 The handoff from human-as-Drafter to co-drafting happens, in the Blueprint, at exactly the boundary between *intent* and *expression*.
 
 ---
@@ -121,23 +131,23 @@ Three rows in the diagram are labeled *Prototype*, sitting after Domain Storytel
 Each row shows AI as the Drafter and humans as the Validator.
 This is a pattern worth naming.
 
-The prototype is not the artifact to be delivered.
+A prototype is not the artifact to be delivered.
 The validated upstream artifact, like the Domain Story, is.
 The prototype is the *instrument that makes validation possible*.
 
 A Domain Story sitting on a Miro board is hard to validate.
-The team agrees with it because they wrote it.
-A Domain Story turned into a working API prototype with stubbed endpoints and example responses is easier to validate because the team can ask it questions. 
+The team agrees with it because they developed it.
+A Domain Story turned into a working API prototype with stubbed endpoints, and example responses are easier to validate because the team can ask it questions. 
 *What happens when an Anonymous User tries to rate?
 Does the system accept a recipe with no ingredients?
 When two cooks claim the same recipe title, what does the API return?*
-The prototype reveals gaps in the Domain Story that nobody noticed when it was just icons and arrows.
+The prototype can reveal gaps in the Domain Story that nobody noticed before.
 
 The same loop runs after EventStorming and after the User and API Journey.
 Each time, AI drafts a richer prototype because the upstream artifacts are richer, and each time the humans validate something different. 
 The first prototype tests the Domain Story.
 The second tests the boundary decisions and event flow.
-The third tests the journey and API surface.
+The third tests the user or API journey.
 This was demonstrated empirically in our published three-iteration prototyping pipeline for [CookWithUs](https://www.codecentric.de/en/knowledge-hub/blog/from-domain-story-to-prototype) — richer artifacts produced measurably more complete prototypes at every step.
 
 The lesson is structural, not specific to prototypes.
@@ -158,7 +168,7 @@ It follows from the Blueprint structure.
 Tactical design is downstream of strategic design.
 By the time the team drafts a Domain Model, existing artifacts such as the Visual Glossary, the EventStorming board, the Context Map, and the API journey are already in place.
 AI now has a rich, project-specific context that did not exist at the top of the Blueprint.
-With that context, AI can draft tactical artifacts with high reliability: cluster events into aggregate candidates, distinguish entities from value objects, propose context map integration patterns with explicit reasoning, derive OpenAPI endpoints from aggregates with invariants encoded as HTTP status codes.
+With that context, AI can draft tactical artifacts with high reliability: cluster events into aggregate candidates, distinguish entities from value objects, propose context map integration patterns with explicit reasoning, derive OpenAPI endpoints from aggregates with invariants.
 
 What humans bring at this stage is judgment.
 The aggregate boundaries AI proposes are *plausible*; however, plausible is different from *right*.
