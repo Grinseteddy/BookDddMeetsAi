@@ -37,16 +37,16 @@ The interesting question is not which role belongs to AI along the Synergetic Bl
 ## Three Roles, Defined
 
 ### Drafter
-The Drafter produces a first-draft artifact: a proposed Domain Story, an OpenAPI specification, a service implementation.
+The Drafter produces a first-draft artifact: a proposed Domain Story (Hofer & Schwentner, 2021), an OpenAPI specification (OpenAPI Initiative, 2025), a service implementation.
 The Drafter's output is concrete enough to be wrong.
 That concreteness is the point: a wrong-but-specific draft is faster to evaluate, edit, or reject than a blank page is to fill from scratch.
 The Drafter does not make decisions; the Drafter creates material that decisions can be made about.
 
 ### Validator
 The Validator checks artifacts for internal consistency and alignment with what is already known.
-Does the term *Meal* in the new EventStorming session match the *Meal* in the Visual Glossary, or has it drifted?
-Does the OpenAPI specification enforce the ubiquitous language documented in the Visual Glossary?
-Are there bounded contexts in the Context Map that no Domain Story or EventStorming ever mentioned?
+Does the term *Meal* in the new EventStorming session (Brandolini, 2023) match the *Meal* in the Visual Glossary (Zörner, 2015), or has it drifted?
+Does the OpenAPI specification use the ubiquitous language (Evans, 2003) documented in the Visual Glossary?
+Are there bounded contexts in the Context Map (Evans, 2003) that no Domain Story or EventStorming ever mentioned?
 Validation is comparison work — checking new artifacts against the accumulated set, and flagging where they diverge.
 
 ### Provocateur
@@ -113,7 +113,7 @@ It has read more failed business plans than any human can ever have.
 By the time the Blueprint reaches Domain Storytelling, the novel decisions are locked in.
 The team has decided what they are building.
 The work shifts from "what should this be?" to "how does it work?", and AI can co-draft the answer.
-A Domain Story for CookWithUs has actors (Cook, Anonymous User), work objects (Recipe, Ingredient, Rating), and activities (publish, rate, share).
+A Domain Story for CookWithUs has actors (Cook, Anonymous User), work objects (Recipe, Ingredient, Rating), and activities (publish, rate, share) (Junker, 2026b).
 None of those are domain inventions; they are domain *expressions*.
 AI has seen enough recipe-sharing platforms to draft a candidate Domain Story that the team can edit in minutes rather than build over hours.
 
@@ -137,18 +137,18 @@ The prototype is the *instrument that makes validation possible*.
 
 A Domain Story sitting on a Miro board is hard to validate.
 The team agrees with it because they developed it.
-A Domain Story turned into a working API prototype with stubbed endpoints, and example responses are easier to validate because the team can ask it questions. 
+A Domain Story turned into a working API prototype with stubbed endpoints and example responses is easier to validate because the team can ask it questions.
 *What happens when an Anonymous User tries to rate?
 Does the system accept a recipe with no ingredients?
 When two cooks claim the same recipe title, what does the API return?*
-The prototype can reveal gaps in the Domain Story that nobody noticed before.
+The prototype can reveal gaps in the Domain Story that nobody noticed before (Junker, 2026c).
 
 The same loop runs after EventStorming and after the User and API Journey.
 Each time, AI drafts a richer prototype because the upstream artifacts are richer, and each time the humans validate something different. 
 The first prototype tests the Domain Story.
 The second tests the boundary decisions and event flow.
 The third tests the user or API journey.
-This was demonstrated empirically in our published three-iteration prototyping pipeline for [CookWithUs](https://www.codecentric.de/en/knowledge-hub/blog/from-domain-story-to-prototype) — richer artifacts produced measurably more complete prototypes at every step.
+This was demonstrated empirically in our published three-iteration prototyping pipeline for [CookWithUs](https://www.codecentric.de/en/knowledge-hub/blog/from-domain-story-to-prototype) — richer artifacts produced measurably more complete prototypes at every step (Junker, 2026c).
 
 The lesson is structural, not specific to prototypes.
 Across the Blueprint, AI's downstream draft is often the lens through which humans validate their upstream draft.
@@ -160,11 +160,11 @@ With it, possible incorrectness becomes visible.
 ## Pattern 3: Tactical Inversion
 
 At the bottom of the diagram, the role distribution is reversed from the top.
-AI is the Drafter for Context Maps, Domain Models, API Product Canvases, Design-Level EventStorming, and Code. 
+AI is the Drafter for Context Maps (Evans, 2003), Domain Models, API Product Canvases (Junker & Lazzaretti, 2025), Design-Level EventStorming (Brandolini, 2023), and Code. 
 Humans are the Validator and Provocateur.
 
 This inversion is not arbitrary.
-It follows from the Blueprint structure.
+It follows from the Blueprint structure (Junker, 2026a).
 Tactical design is downstream of strategic design.
 By the time the team drafts a Domain Model, existing artifacts such as the Visual Glossary, the EventStorming board, the Context Map, and the API journey are already in place.
 AI now has a rich, project-specific context that did not exist at the top of the Blueprint.
@@ -223,20 +223,21 @@ When to trust AI output, when to challenge it, and how to keep the human firmly 
 
 ## References
 
-Brandolini, A. (2023). *EventStorming*. Retrieved from <https://www.eventstorming.com/>
+Brandolini, A. (2023). *EventStorming*. EventStorming. https://www.eventstorming.com/, retrieved 04 2026.
 
 Evans, E. (2003). *Domain-driven design: Tackling complexity in the heart of software*. Addison-Wesley.
 
 Hofer, S., & Schwentner, H. (2021). *Domain Storytelling: A Collaborative, Visual, and Agile Way to Build Domain-Driven Software*. Pearson International.
 
-Junker, A. (2025). *Mastering domain-driven design*. BPB Publications.
-
-Junker, A. (2026). *DDD Toolbox*. BPB Publications.
-
-Junker, A. (2026, March 4). *From stories to code: How domain storytelling and EventStorming give LLMs the context they need*. codecentric AG. <https://www.codecentric.de/en/knowledge-hub/blog/from-stories-to-code-how-domain-storytelling-and-eventstorming-give-llms-the-context-they-need>
-
-Junker, A. (2026, April 2). *From domain story to prototype: Specification-driven prototyping in DDD workshops*. codecentric AG. <https://www.codecentric.de/en/knowledge-hub/blog/from-domain-story-to-prototype>
-
 Junker, A., & Lazzaretti, F. (2025). *Crafting great APIs with domain-driven design*. Apress.
 
-Zörner, S. (2015). *Softwarearchitekturen dokumentieren und kommunizieren*. München: Carl Hanser Verlag.
+Junker, A. (2026a). *DDD Toolbox*. BPB Publications.
+
+Junker, A. (2026b, March 4). *From stories to code: How domain storytelling and EventStorming give LLMs the context they need*. codecentric AG. https://www.codecentric.de/en/knowledge-hub/blog/from-stories-to-code-how-domain-storytelling-and-eventstorming-give-llms-the-context-they-need, retrieved 05 2026.
+
+Junker, A. (2026c, April 2). *From domain story to prototype: Specification-driven prototyping in DDD workshops*. codecentric AG. https://www.codecentric.de/en/knowledge-hub/blog/from-domain-story-to-prototype, retrieved 05 2026.
+
+OpenAPI Initiative. (2025). *The World's Most Widely Used API Description Standard*. OpenAPI Initiative. https://www.openapis.org/ (Linux Foundation Project), retrieved 03 2026.
+
+Zörner, S. (2015). *Softwarearchitekturen dokumentieren und kommunizieren, Entwürfe, Entscheidungen und Lösungen nachvollziehbar und wirkungsvoll festhalten (Document and Communicate Software Architectures: Traceable and Effective Capturing of Decisions and Solutions)*. München: Carl Hanser Verlag.
+
