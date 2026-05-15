@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-OUTPUT="BookDddMeetsAi.docx"
+OUTPUT="index.docx"
 
 # Check if DOCX is currently open (macOS: lsof checks open file handles)
 if lsof "$OUTPUT" > /dev/null 2>&1; then
@@ -9,30 +9,30 @@ if lsof "$OUTPUT" > /dev/null 2>&1; then
     exit 1
 fi
 
-echo "🔍 Running consistency check..."
-python3 check.py || exit 1
-
 echo "🧹 Cleaning up..."
 rm -f "$OUTPUT"
-rm -f /tmp/pandoc-*
+rm -f /tmp/pandoc-index-*
+
+echo "🔎 Collecting chapter index files..."
+INDEX_FILES=$(find chapters/ -name "chapter*_index.md" | sort)
+
+if [ -z "$INDEX_FILES" ]; then
+    echo "⚠️  No chapterXX_index.md files found under chapters/."
+    exit 1
+fi
+
+echo "📑 Found index files:"
+echo "$INDEX_FILES" | sed 's/^/   - /'
 
 echo "📚 Building $OUTPUT..."
 RESOURCE_PATHS=$(find chapters/ -type d | tr '\n' ':')
 
-find chapters/ -name "*.md" ! -name "chapter*_index.md" | sort | xargs pandoc \
+echo "$INDEX_FILES" | xargs pandoc \
   --resource-path=.:$RESOURCE_PATHS \
   --reference-doc=templates/TemplateDddMeetsAi.docx \
   --lua-filter=templates/chapter-as-header.lua \
-  --lua-filter=templates/section-bibliographies.lua \
   --lua-filter=templates/header-as-chapter.lua \
   --lua-filter=templates/table-cell-styles.lua \
-  --metadata=section-bibs-bibliography:references.bib \
-  --metadata=section-bibs-level:1 \
-  --metadata=reference-section-title:"References" \
-  --csl=templates/ieee.csl \
   -o "$OUTPUT"
-
-echo "🔧 Injecting title-only header (header4.xml)..."
-python3 postprocess_headers.py "$OUTPUT"
 
 echo "✅ Done! $OUTPUT created."

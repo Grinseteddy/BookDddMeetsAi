@@ -1,6 +1,5 @@
-::: {custom-style="Chapter Title"}
-Abbreviations and terms
-:::
+# Abbreviations and terms
+
 
 | Abbreviation and Terms                   | Note |
 |--|-------|
@@ -40,3 +39,13 @@ Abbreviations and terms
 | Wardley Map                              | a visual representation of the value and maturity of functions and implementing software                                                         |
 
 
+```{=openxml}
+<w:p>
+  <w:pPr>
+    <w:sectPr>
+      <w:headerReference w:type="default" r:id="rId500"/>
+      <w:type w:val="nextPage"/>
+    </w:sectPr>
+  </w:pPr>
+</w:p>
+```

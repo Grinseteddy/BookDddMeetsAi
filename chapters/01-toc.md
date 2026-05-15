@@ -1,6 +1,8 @@
-::: {custom-style="Chapter Title"}
-Contents
-:::
+
+#  Contents
+
+
+
 ```{=openxml}
 <w:p>
   <w:fldSimple w:instr=" TOC \h \z \t &quot;Chapter Title,1,Part Title,1,Heading 1,2,Heading 2,3,Heading 3,4&quot; ">
@@ -13,6 +15,7 @@ Contents
 <w:p>
   <w:pPr>
     <w:sectPr>
+      <w:headerReference w:type="default" r:id="rId500"/>
       <w:type w:val="nextPage"/>
     </w:sectPr>
   </w:pPr>
