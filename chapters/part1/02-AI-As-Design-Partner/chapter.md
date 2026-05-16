@@ -158,7 +158,7 @@ The Provocateur role is comparable to Brooks' Copilot, who "performs the work of
 The positions of the AI along the spectrum of Drafter, Validator, and Provocateur are not fixed.
 It can change from one step in the development process to the next.
 
-# AI as Validator, Accelerator, and Provocateur
+# The roles along the Synergetic Blueprint
 
 The three roles of Drafter, Validator, and Provocateur are not mutually exclusive.
 AI can play multiple roles in the same development process, but it cannot play multiple roles at the same time.
@@ -188,6 +188,8 @@ Three patterns are worth pulling out.
 :::
 
 ## Pattern 1: AI cannot draft a Genuinely New Idea
+
+[//]: #  (Todo: Add forward link to North Star, Busines Plan, and Domain Storytelling chapters)
 
 At the top of the Blueprint, North Star and Business Plan, humans are the Drafters and AI is the Provocateur.
 The AI is mostly a Provocateur, suggesting alternative approaches and solutions that the team may not have considered.
